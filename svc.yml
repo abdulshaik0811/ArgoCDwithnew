@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: Abdul
+spec:
+  type: LoadBalancer
+  selector:
+    app: laptop-web
+  ports:
+    - port: 80
+      targetPort: 80
