@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laptop-web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: laptop-web
+  template:  
+    metadata:
+      labels:
+        app: laptop-web
+    spec:
+      containers:
+        - name: cont-1
+          image: abdulshaik0811/kuberepo:lapwebimage
+          ports:
+            - containerPort: 80
+          envFrom:
+            - secretRef:
+                name: sec1
