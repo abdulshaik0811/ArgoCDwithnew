@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: laptop-web
-  template:  
+  template:
     metadata:
       labels:
         app: laptop-web
@@ -17,6 +17,5 @@ spec:
           image: abdulshaik0811/kuberepo:lapwebimage
           ports:
             - containerPort: 80
-          envFrom:
-            - secretRef:
-                name: sec1
+      imagePullSecrets:
+        - name: regcred  
