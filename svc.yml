@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: Abdul
+  name: abdul
 spec:
   type: LoadBalancer
   selector:
